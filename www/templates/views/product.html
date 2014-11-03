@@ -5,7 +5,7 @@
     </div>
     <div class="padding">
       <h4>{{product.title}}</h4>
-      <p>{{product.content}}</p>
+      <p ng-bind-html="product.content"></p>
     </div>
   </ion-content>
 </ion-view>

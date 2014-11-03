@@ -1,0 +1,13 @@
+<ion-view title="KnowHow">
+  <ion-content>
+    <iframe width="100%" height="auto" ng-src="{{main.url}}" frameborder="0"></iframe>
+    <div on-tap="loadVideo(video)" ng-repeat="video in videos">
+      <div class="section" href="#/tab/video/{{video.id}}">
+        <div class="section-image" style="background-image: url('{{video.image}}')">
+          <div class="black-fade"></div>
+          <p>{{video.title}}</p>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

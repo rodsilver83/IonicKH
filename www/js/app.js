@@ -1,6 +1,14 @@
 angular.module('ionicApp', ['ionic','Directives','Controllers','Services'])
 
-  .config(function($stateProvider, $urlRouterProvider) {
+  .config(function($stateProvider, $urlRouterProvider,$sceDelegateProvider) {
+
+    $sceDelegateProvider.resourceUrlWhitelist([
+      // Allow same origin resource loads.
+      'self',
+      // Allow loading from our assets domain.  Notice the difference between * and **.
+      'https://www.youtube.com/**',
+      'http://www.noiseaddicts.com/**'
+    ]);
 
     $stateProvider
       .state('tabs', {
@@ -35,6 +43,15 @@ angular.module('ionicApp', ['ionic','Directives','Controllers','Services'])
           }
         }
       })
+      .state('tabs.content', {
+        url: "/content/:id",
+        views: {
+          'home-tab': {
+            templateUrl: "templates/views/contentText.html",
+            controller: 'ContentCtrl'
+          }
+        }
+      })
       .state('tabs.menu', {
         url: "/menu/:id",
         views: {
@@ -50,6 +67,24 @@ angular.module('ionicApp', ['ionic','Directives','Controllers','Services'])
           'home-tab': {
             templateUrl: "templates/views/contentQuestions.html",
             controller: 'QuestionsCtrl'
+          }
+        }
+      })
+      .state('tabs.video', {
+        url: "/video",
+        views: {
+          'home-tab': {
+            templateUrl: "templates/views/video.html",
+            controller: 'VideoCtrl'
+          }
+        }
+      })
+      .state('tabs.audio', {
+        url: "/audio",
+        views: {
+          'home-tab': {
+            templateUrl: "templates/views/audio.html",
+            controller: 'AudioCtrl'
           }
         }
       })

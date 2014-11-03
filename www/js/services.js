@@ -30,6 +30,9 @@ angular.module('Services', [])
           case 'contentQuestions':
             return '#/tab/questions/'+section.id;
             break;
+          case 'content':
+            return '#/tab/content/'+section.id;
+            break;
           default:
             return '#/tab/home';
         }
