@@ -1,0 +1,12 @@
+<ion-view title="KnowHow">
+  <ion-content>
+    <div ng-repeat="section in sections">
+      <a class="section" href="{{goTo(section)}}">
+        <div class="section-image" style="background-image: url('{{section.image}}')">
+          <div class="black-fade"></div>
+          <p>{{section.title}}</p>
+        </div>
+      </a>
+    </div>
+  </ion-content>
+</ion-view>

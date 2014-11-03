@@ -1,0 +1,37 @@
+{
+  "status": "ok",
+  "message": "OK",
+  "data": {
+    "menu": {
+      "title": "Imagen Ejecutivo",
+      "image": "http://webadmin.tapp.q-ark.mx/assets/uploads/internews/noticias/3a9b2-10_img_entrada.png"
+    },
+    "questions": [
+      {
+        "type": "checkbox",
+        "title": "Uniforme: playera de la compañia, limpia y planchada",
+        "answers": []
+      },
+      {
+        "type": "open",
+        "title": "¿Como te llamas?",
+        "answers": []
+      },
+      {
+        "type": "multiple",
+        "title": "¿Con que frecuencia tiene usted coito?",
+        "answers": [
+          {
+            "title": "1 vez al mes"
+          },
+          {
+            "title": "1 vez a la semana"
+          },
+          {
+            "title": "1 vez al dia"
+          }
+        ]
+      }
+    ]
+  }
+}

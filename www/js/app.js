@@ -1,4 +1,4 @@
-angular.module('ionicApp', ['ionic'])
+angular.module('ionicApp', ['ionic','Directives','Controllers','Services'])
 
   .config(function($stateProvider, $urlRouterProvider) {
 
@@ -13,34 +13,47 @@ angular.module('ionicApp', ['ionic'])
         views: {
           'home-tab': {
             templateUrl: "templates/home.html",
-            controller: 'HomeTabCtrl'
+            controller: 'HomeCtrl'
           }
         }
       })
-      .state('tabs.facts', {
-        url: "/facts",
+      .state('tabs.list', {
+        url: "/list/:id",
         views: {
           'home-tab': {
-            templateUrl: "templates/facts.html"
+            templateUrl: "templates/views/list.html",
+            controller: 'ListCtrl'
           }
         }
       })
-      .state('tabs.facts2', {
-        url: "/facts2",
+      .state('tabs.product', {
+        url: "/product/:id",
         views: {
           'home-tab': {
-            templateUrl: "templates/facts2.html"
+            templateUrl: "templates/views/product.html",
+            controller: 'ProductCtrl'
           }
         }
       })
-      .state('tabs.categories', {
-        url: "/categories",
+      .state('tabs.menu', {
+        url: "/menu/:id",
         views: {
           'home-tab': {
-            templateUrl: "templates/categories.html"
+            templateUrl: "templates/views/menu.html",
+            controller: 'MenuCtrl'
           }
         }
-      });
+      })
+      .state('tabs.questions', {
+        url: "/questions/:id",
+        views: {
+          'home-tab': {
+            templateUrl: "templates/views/contentQuestions.html",
+            controller: 'QuestionsCtrl'
+          }
+        }
+      })
+      ;
 
     $urlRouterProvider.otherwise("/tab/home");
 

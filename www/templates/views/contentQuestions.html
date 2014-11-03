@@ -1,0 +1,47 @@
+<ion-view title="KnowHow">
+  <ion-content>
+    <div class="item item-image">
+      <img ng-src="{{main.image}}">
+    </div>
+    <div>
+      <p class="menu-title">{{main.title}}</p>
+
+      <div class="questions-list">
+        <div class="question" ng-repeat="question in questions">
+          <div ng-if="question.type == 'checkbox'">
+            <div class="row row-center">
+              <div class="col-80">
+                <p>{{question.title}}</p>
+              </div>
+              <div class="col-20 center">
+                <div class="item item-checkbox">
+                  <label class="checkbox">
+                    <input type="checkbox">
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div ng-if="question.type == 'open'">
+            <div class="row">
+              <label class="item item-input item-floating-label">
+                <span class="input-label">{{question.title}}</span>
+                <input type="text" placeholder="{{question.title}}">
+              </label>
+            </div>
+          </div>
+          <div ng-if="question.type == 'multiple'">
+            <div class="row">
+              <p>{{question.title}}</p>
+            </div>
+            <div class="row">
+              <select ng-model="answer.choice" ng-options="answer.title for answer in question.answers">
+                <option value="">-- Opciones --</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

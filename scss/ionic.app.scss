@@ -15,13 +15,11 @@ $royal:                           #8a6de9 !default;
 $dark:                            #444 !default;
 */
 
-$stable:                          #444 !default;
-$button-stable-text:              #fff !default;
+$dark:                            #333 !default;
+$button-dark-text:                #f8f8f8 !default;
+$base-background-color:           #ccc !default;
 
-.tabs{
-  display: none !important;
-}
-
+@import "../scss/knowhow.scss";
 
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
@@ -29,3 +27,68 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
 
+.section-multimedia{
+  position: relative;
+  z-index: 100;
+  left: 0%;
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -ms-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+.open{
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -ms-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  left: -67%;
+}
+
+.multimedia-buttons{
+  background: #ffffff;
+  height: 110px;
+  margin-top: -110px;
+  width: 100%;
+  z-index: 10;
+}
+
+.row-multimedia{
+  height: 110px;
+}
+
+.multimedia-icon{
+  border: 1px solid #666666;
+  border-radius: 25px;
+  color: #666666;
+  height: 50px;
+  width: 50px;
+}
+
+.multimedia-back{
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 25px;
+  height: 50px;
+  width: 50px;
+  float: right;
+  right: 7%;
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -ms-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  opacity: 1;
+}
+
+.ng-hide{
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -ms-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  opacity: 0;
+  display: block !important;
+}

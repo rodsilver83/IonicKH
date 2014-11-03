@@ -1,10 +1,36 @@
-<ion-view title="Home">
-  <ion-content class="padding">
-    <p>
-      <a class="button icon icon-right ion-chevron-right" href="#/tab/facts">Scientific Facts</a>
-    </p>
-    <p>
-      <a class="button icon icon-right ion-chevron-right" href="#/tab/categories">Categories</a>
-    </p>
+<ion-view title="KnowHow">
+  <ion-content>
+    <div ng-cloak section="section" ng-repeat="section in sections">
+      <a ng-if="section.type != 'multimedia'" class="section" href="{{goTo(section)}}">
+        <div class="section-image" style="background-image: url('{{section.image}}')">
+          <div class="black-fade"></div>
+          <p>{{section.title}}</p>
+        </div>
+      </a>
+
+      <div ng-if="section.type == 'multimedia'" class="section" ng-init="open=false">
+        <div on-tap="open=!open" class="section-image section-multimedia"
+             ng-class="{open:open}" style="background-image: url('{{section.image}}')">
+          <div class="black-fade">
+            <div class="row row-center row-multimedia">
+              <div class="col">
+                <a ng-show="open" class="multimedia-back button button-icon icon ion-ios7-arrow-forward"></a>
+              </div>
+            </div>
+          </div>
+          <p>{{section.title}}</p>
+        </div>
+        <div class="multimedia-buttons">
+          <div class="row row-center row-multimedia">
+            <div class="col-offset-33 col-33 center">
+              <a class="multimedia-icon button button-icon icon ion-ios7-videocam"></a>
+            </div>
+            <div class="col-33 center">
+              <a class="multimedia-icon button button-icon icon ion-ios7-volume-high"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </ion-content>
 </ion-view>

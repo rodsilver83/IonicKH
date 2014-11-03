@@ -1,0 +1,24 @@
+{
+  "status": "ok",
+  "message": "OK",
+  "data": [
+    {
+      "title": "Autos",
+      "image": "http://webadmin.tapp.q-ark.mx/assets/uploads/internews/noticias/d2fd7-12_img_entrada.png",
+      "type": "product",
+      "id": 4
+    },
+    {
+      "title": "Producto 2",
+      "image": "http://webadmin.tapp.q-ark.mx/assets/uploads/internews/noticias/d4720-16_img_entrada.png",
+      "type": "product",
+      "id": 5
+    },
+    {
+      "title": "Producto 3",
+      "image": "http://webadmin.tapp.q-ark.mx/assets/uploads/internews/noticias/3a9b2-10_img_entrada.png",
+      "type": "product",
+      "id": 3
+    }
+  ]
+}

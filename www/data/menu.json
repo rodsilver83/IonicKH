@@ -1,0 +1,30 @@
+{
+  "status": "ok",
+  "message": "OK",
+  "data": {
+    "menu": {
+      "title": "Preparacion antes de iniciar",
+      "image": "http://webadmin.tapp.q-ark.mx/assets/uploads/internews/noticias/3a9b2-10_img_entrada.png"
+    },
+    "menus": [
+      {
+        "title": "Imagen del Ejecutivo",
+        "image": "http://webadmin.tapp.q-ark.mx/assets/uploads/internews/noticias/3a9b2-10_img_entrada.png",
+        "type": "contentQuestions",
+        "id": 1
+      },
+      {
+        "title": "Imagen de la tienda",
+        "image": "",
+        "type": "menu",
+        "id": 2
+      },
+      {
+        "title": "Imagen y funcionalidad del mostrador",
+        "image": "",
+        "type": "product",
+        "id": 3
+      }
+    ]
+  }
+}

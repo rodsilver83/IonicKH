@@ -1,0 +1,15 @@
+<ion-view title="KnowHow">
+  <ion-content>
+    <div class="item item-image">
+      <img ng-src="{{main.image}}">
+    </div>
+    <div>
+      <p class="menu-title">{{main.title}}</p>
+      <div class="list-menu">
+        <a class="menu-button" href="{{goTo(menu)}}" ng-repeat="menu in menus">
+          <p>{{menu.title}}</p>
+        </a>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
