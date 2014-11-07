@@ -95,6 +95,77 @@ a {
 select {
   width: 100%; }
 
+.section-multimedia {
+  position: relative;
+  z-index: 100;
+  left: 0%;
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -ms-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+  transition: all 0.6s ease; }
+
+.open {
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -ms-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  left: -67%; }
+
+.multimedia-buttons {
+  background: #ffffff;
+  height: 110px;
+  margin-top: -110px;
+  width: 100%;
+  z-index: 10; }
+
+.row-multimedia {
+  height: 110px; }
+
+.multimedia-icon {
+  border: 1px solid #666666;
+  border-radius: 25px;
+  color: #666666;
+  height: 50px;
+  width: 50px; }
+
+.multimedia-back {
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 25px;
+  height: 50px;
+  width: 50px;
+  float: right;
+  right: 7%;
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -ms-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  opacity: 1; }
+
+.ng-hide {
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -ms-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  opacity: 0;
+  display: block !important; }
+
+audio {
+  display: none; }
+
+.audio-controls {
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  top: 0; }
+
+.audio-back {
+  opacity: 0.25; }
+
 /*!
   Ionicons, v1.5.2
   Created by Ben Sperry for the Ionic Framework, http://ionicons.com/
@@ -7896,73 +7967,38 @@ $ios-transition-box-shadow-end: -200px 0px 200px rgba(0,0,0,0.15), -5px 0px 5px 
   -webkit-transition: none !important;
   transition: none !important; }
 
-.section-multimedia {
-  position: relative;
-  z-index: 100;
-  left: 0%;
-  -webkit-transition: all 0.6s ease;
-  -moz-transition: all 0.6s ease;
-  -ms-transition: all 0.6s ease;
-  -o-transition: all 0.6s ease;
-  transition: all 0.6s ease; }
-
-.open {
-  -webkit-transition: all 0.6s ease;
-  -moz-transition: all 0.6s ease;
-  -ms-transition: all 0.6s ease;
-  -o-transition: all 0.6s ease;
-  transition: all 0.6s ease;
-  left: -67%; }
-
-.multimedia-buttons {
-  background: #ffffff;
-  height: 110px;
-  margin-top: -110px;
+#login_container {
+  background: #fc1f1f;
+  background: -moz-linear-gradient(top, #fc1f1f 0%, #5b0002 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fc1f1f), color-stop(100%, #5b0002));
+  background: -webkit-linear-gradient(top, #fc1f1f 0%, #5b0002 100%);
+  background: -o-linear-gradient(top, #fc1f1f 0%, #5b0002 100%);
+  background: -ms-linear-gradient(top, #fc1f1f 0%, #5b0002 100%);
+  background: linear-gradient(to bottom, #fc1f1f 0%, #5b0002 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fc1f1f', endColorstr='#5b0002',GradientType=0 );
   width: 100%;
-  z-index: 10; }
+  height: 100%; }
 
-.row-multimedia {
-  height: 110px; }
+.col-center {
+  text-align: center; }
 
-.multimedia-icon {
-  border: 1px solid #666666;
-  border-radius: 25px;
-  color: #666666;
-  height: 50px;
-  width: 50px; }
+.login-email {
+  background-color: #008A93;
+  border-radius: 10px;
+  color: #ffffff !important;
+  text-align: center; }
 
-.multimedia-back {
+.login-button {
+  background-color: #008A93;
+  border-radius: 10px;
   color: #ffffff;
-  border: 1px solid #ffffff;
-  border-radius: 25px;
-  height: 50px;
-  width: 50px;
-  float: right;
-  right: 7%;
-  -webkit-transition: all 0.6s ease;
-  -moz-transition: all 0.6s ease;
-  -ms-transition: all 0.6s ease;
-  -o-transition: all 0.6s ease;
-  transition: all 0.6s ease;
-  opacity: 1; }
+  margin: 20px 20px;
+  padding: 7px; }
 
-.ng-hide {
-  -webkit-transition: all 0.6s ease;
-  -moz-transition: all 0.6s ease;
-  -ms-transition: all 0.6s ease;
-  -o-transition: all 0.6s ease;
-  transition: all 0.6s ease;
-  opacity: 0;
-  display: block !important; }
+.login-check > .item-checkbox {
+  background: transparent !important;
+  color: #ffffff !important; }
 
-audio {
-  display: none; }
-
-.audio-controls {
-  width: 100%;
-  height: 100px;
-  position: absolute;
-  top: 0; }
-
-.audio-back {
-  opacity: 0.25; }
+.login-check .checkbox-icon:before {
+  background: #008A93 !important;
+  border: none !important; }

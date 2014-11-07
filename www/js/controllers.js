@@ -2,6 +2,11 @@
  * Created by Rod on 10/31/14.
  */
 angular.module('Controllers', [])
+  .controller('LoginCtrl',['HomeService','$scope','$state',function(HomeService,$scope,$state){
+    $scope.doLogin = function (){
+      $state.go('tabs.home');
+    }
+  }])
   .controller('HomeCtrl', ['HomeService', '$scope', '$http', function (HomeService, $scope, $http) {
 
     $http.get('data/home.json', {cache: true}).success(function (data) {

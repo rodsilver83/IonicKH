@@ -11,6 +11,20 @@ angular.module('ionicApp', ['ionic','Directives','Controllers','Services'])
     ]);
 
     $stateProvider
+      .state('launch', {
+        url: "/launch",
+        abstract: true,
+        templateUrl: "templates/launch.html"
+      })
+      .state('launch.login', {
+        url: "/login",
+        views: {
+          'login-tab': {
+            templateUrl: "templates/login.html",
+            controller: 'LoginCtrl'
+          }
+        }
+      })
       .state('tabs', {
         url: "/tab",
         abstract: true,
@@ -90,7 +104,7 @@ angular.module('ionicApp', ['ionic','Directives','Controllers','Services'])
       })
       ;
 
-    $urlRouterProvider.otherwise("/tab/home");
+    $urlRouterProvider.otherwise("/launch/login");
 
   })
 
