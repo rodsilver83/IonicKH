@@ -178,8 +178,6 @@ angular.module('Controllers', ['ui.calendar'])
       var m = date.getMonth();
       var y = date.getFullYear();
 
-      $scope.fecha = "fechas";
-
       $scope.detail = {date: null, month: null};
 
       $scope.uiConfig = {
@@ -188,8 +186,7 @@ angular.module('Controllers', ['ui.calendar'])
             left: 'prev',
             center: 'title',
             right: 'next'
-          },
-          eventClick: $scope.alertOnEventClick
+          }
         }
       };
 
@@ -201,12 +198,12 @@ angular.module('Controllers', ['ui.calendar'])
       /* event source that contains custom events on the scope */
 
       $scope.events = [
-        {title: 'Eventoa', start: "11 03 2014 10:00:00 GMT-0600", className: "eventA"}
+        {title: 'Evento A', start: "11 03 2014 10:00:00 GMT-0600", className: "eventA"}
       ];
 
       /* event sources array*/
       $scope.eventSources = [$scope.events];
-
+/*
       $scope.alertOnEventClick = function (date, jsEvent, view) {
         setDetailDate(date._start);
         $scope.openModal();
@@ -278,6 +275,7 @@ angular.module('Controllers', ['ui.calendar'])
       $scope.$on('modal.removed', function () {
         // Execute action
       });
+      */
     }])
 
   .controller('HomeTabCtrl', function ($scope) {
