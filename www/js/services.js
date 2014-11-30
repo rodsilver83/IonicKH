@@ -33,6 +33,9 @@ angular.module('Services', [])
           case 'content':
             return '#/tab/content/'+section.id;
             break;
+          case 'calendar':
+            return '#/tab/calendar/'+section.id;
+            break;
           default:
             return '#/tab/home';
         }

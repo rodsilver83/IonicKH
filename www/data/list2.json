@@ -3,22 +3,22 @@
   "message": "OK",
   "data": [
     {
-      "title": "Menu 1",
-      "image": "http://webadmin.tapp.q-ark.mx/assets/uploads/internews/noticias/d2fd7-12_img_entrada.png",
+      "title": "Preparación antes de iniciar",
+      "image": "img/catalogo/10.jpg",
       "type": "menu",
       "id": 1
     },
     {
-      "title": "Menu 2",
-      "image": "http://webadmin.tapp.q-ark.mx/assets/uploads/internews/noticias/d4720-16_img_entrada.png",
-      "type": "content",
+      "title": "Operacion de la tienda",
+      "image": "img/catalogo/11.jpg",
+      "type": "menu",
       "id": 2
     },
     {
-      "title": "Menu 3",
-      "image": "http://webadmin.tapp.q-ark.mx/assets/uploads/internews/noticias/3a9b2-10_img_entrada.png",
-      "type": "menu",
-      "id": 3
+      "title": "Seguridad",
+      "image": "img/catalogo/12.jpg",
+      "type": "contentQuestions",
+      "id": 1
     }
   ]
 }

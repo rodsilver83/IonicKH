@@ -1,10 +1,10 @@
 <ion-view title="KnowHow">
   <ion-content>
-    <div ng-repeat="section in sections">
-      <a class="section" href="{{goTo(section)}}">
-        <div class="section-image" style="background-image: url('{{section.image}}')">
-          <div class="black-fade"></div>
-          <p>{{section.title}}</p>
+    <div ng-cloak section="section" ng-repeat="section in sections" style="height:{{height}}px;" class="section">
+      <a ng-if="section.type != 'multimedia'" class="section" href="{{goTo(section)}}" style="height:{{height}}px;">
+        <div class="section-image main-section-image" style="background-image: url('{{section.image}}'); height:{{height}}px;">
+          <div class="black-fade" style="height:{{height}}px;"></div>
+          <p style="margin-top: {{marginText}}px">{{section.title}}</p>
         </div>
       </a>
     </div>

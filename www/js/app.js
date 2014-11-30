@@ -1,4 +1,11 @@
-angular.module('ionicApp', ['ionic','Directives','Controllers','Services'])
+angular.module('ionicApp', ['ionic','ngCordova','ui.calendar','Directives','Controllers','Services'])
+
+  .run(function($cordovaSplashscreen) {
+
+    setTimeout(function() {
+      $cordovaSplashscreen.hide()
+    }, 3000)
+  })
 
   .config(function($stateProvider, $urlRouterProvider,$sceDelegateProvider) {
 
@@ -102,12 +109,18 @@ angular.module('ionicApp', ['ionic','Directives','Controllers','Services'])
           }
         }
       })
+      .state('tabs.calendar', {
+        url: "/calendar/:id",
+        views: {
+          'home-tab': {
+            templateUrl: "templates/views/calendar.html",
+            controller: 'CalendarCtrl'
+          }
+        }
+      })
       ;
 
     $urlRouterProvider.otherwise("/launch/login");
 
   })
-
-  .controller('HomeTabCtrl', function($scope) {
-    console.log('HomeTabCtrl');
-  });
+;

@@ -1,12 +1,13 @@
 <ion-view title="KnowHow">
   <ion-content>
     <div class="item item-image">
-      <img ng-src="{{main.image}}">
+      <div class="section-image main-section-image" style="background-image: url('{{main.image}}'); height:150px;">
+      </div>
     </div>
     <div>
       <p class="menu-title">{{main.title}}</p>
       <div class="list-menu">
-        <a class="menu-button" href="{{goTo(menu)}}" ng-repeat="menu in menus">
+        <a class="menu-button" href="{{goTo(menu)}}" ng-repeat="menu in menus" style="height: {{height}}px">
           <p>{{menu.title}}</p>
         </a>
       </div>

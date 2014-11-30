@@ -1,0 +1,43 @@
+{
+  "status": "ok",
+  "message": "OK",
+  "data": {
+    "menu": {
+      "title": "Operación de la tienda",
+      "image": "img/catalogo/11.jpg"
+    },
+    "menus": [
+      {
+        "title": "Actividades previas a la apertura",
+        "image": "",
+        "type": "contentQuestions",
+        "id": 1
+      },
+      {
+        "title": "Operación cotidiana",
+        "image": "",
+        "type": "contentQuestions",
+        "id": 1
+      },
+      {
+        "title": "Inventarios",
+        "image": "",
+        "type": "contentQuestions",
+        "id": 1
+      },
+      {
+        "title": "Pedidos",
+        "image": "",
+        "type": "contentQuestions",
+        "id": 1
+      },
+
+      {
+        "title": "Recepción de mercancía",
+        "image": "",
+        "type": "contentQuestions",
+        "id": 1
+      }
+    ]
+  }
+}

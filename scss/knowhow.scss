@@ -25,6 +25,7 @@ div.black-fade{
   padding: 5px;
   position: absolute;
   color: #fff;
+  font-size: 20px;
 }
 
 .section-image{
@@ -119,6 +120,160 @@ select{
   left: -67%;
 }
 
+.ng-hide{
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -ms-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  opacity: 0;
+  display: block !important;
+}
+
+audio{
+  display: none;
+}
+
+.audio-controls{
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  top:0;
+}
+
+.audio-back{
+  opacity: 0.25;
+}
+
+
+div.tabs > .tab-item{
+  display: none !important;
+}
+
+a.section{
+  height: 49px;
+}
+
+div.black-fade{
+  background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.99) 99%, rgba(0,0,0,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(99%,rgba(0,0,0,0.99)), color-stop(100%,rgba(0,0,0,1)));
+  background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.99) 99%,rgba(0,0,0,1) 100%);
+  background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.99) 99%,rgba(0,0,0,1) 100%);
+  background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.99) 99%,rgba(0,0,0,1) 100%);
+  background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.99) 99%,rgba(0,0,0,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 );
+  position: absolute;
+  height: 110px;
+  width: 100%;
+}
+
+.section > .section-image > p{
+  margin-top: 4.0em;
+  padding: 5px;
+  position: absolute;
+  color: #fff;
+}
+
+.section-image{
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  height: 110px;
+}
+
+.main-section-image{
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 110px;
+}
+
+.username{
+  font-size: 17px;
+  color: $button-dark-text;
+}
+
+
+.menu-title{
+  box-shadow: 1px 1px 10px black;
+  color: #333;
+  padding: 5px;
+  background: #ffffff;
+}
+
+.menu-button{
+  background: #ffffff;
+  text-align: center;
+  margin: 2%;
+  width: 96%;
+  border-radius: 2px;
+  color: #666;
+  height: 50px;
+  display: table;
+  vertical-align: middle;
+
+}
+
+.menu-button > p{
+  display: table-cell;
+  height: 100%;
+  line-height: 100%;
+  vertical-align: middle;
+  width: 100%;
+}
+
+a{
+  text-decoration: none;
+}
+
+.questions-list{
+  display: block;
+}
+
+.question{
+  background: none repeat scroll 0 0 white;
+  border-bottom: 1px solid #ddd;
+  display: block;
+  padding: 5px;
+}
+
+.center{
+  text-align: center;
+}
+
+.item{
+  border: none !important;
+}
+
+.item-input{
+  padding: 0px;
+}
+
+select{
+  width: 100%;
+}
+
+
+.section-multimedia{
+  position: relative;
+  z-index: 100;
+  left: 0%;
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -ms-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+.open{
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -ms-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  left: -67%;
+}
+
 .multimedia-buttons{
   background: #ffffff;
   height: 110px;
@@ -129,20 +284,21 @@ select{
 
 .row-multimedia{
   height: 110px;
+  box-shadow: 10px 0px 20px #888;
 }
 
 .multimedia-icon{
-  border: 1px solid #666666;
-  border-radius: 25px;
-  color: #666666;
+  border: 1px solid #666666 !important;
+  border-radius: 25px !important;
+  color: #666666 !important;
   height: 50px;
   width: 50px;
 }
 
 .multimedia-back{
-  color: #ffffff;
-  border: 1px solid #ffffff;
-  border-radius: 25px;
+  color: #ffffff !important;
+  border: 1px solid #ffffff !important;
+  border-radius: 25px !important;
   height: 50px;
   width: 50px;
   float: right;
@@ -153,6 +309,8 @@ select{
   -o-transition: all 0.6s ease;
   transition: all 0.6s ease;
   opacity: 1;
+  padding-left: 9px !important;
+  padding-top: 0 !important;
 }
 
 .ng-hide{
@@ -178,4 +336,124 @@ audio{
 
 .audio-back{
   opacity: 0.25;
+}
+
+#login_container{
+  background: rgb(252,31,31);
+  background: -moz-linear-gradient(top,  rgba(252,31,31,1) 0%, rgba(91,0,2,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,31,31,1)), color-stop(100%,rgba(91,0,2,1)));
+  background: -webkit-linear-gradient(top,  rgba(252,31,31,1) 0%,rgba(91,0,2,1) 100%);
+  background: -o-linear-gradient(top,  rgba(252,31,31,1) 0%,rgba(91,0,2,1) 100%);
+  background: -ms-linear-gradient(top,  rgba(252,31,31,1) 0%,rgba(91,0,2,1) 100%);
+  background: linear-gradient(to bottom,  rgba(252,31,31,1) 0%,rgba(91,0,2,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fc1f1f', endColorstr='#5b0002',GradientType=0 );
+  width: 100%;
+  height: 100%;
+}
+
+.col-center{
+  text-align: center;
+}
+
+.login-email{
+  background-color: #008A93;
+  border-radius: 10px;
+  color: #ffffff !important;
+  text-align: center;
+}
+
+.login-button{
+  background-color: #008A93;
+  border-radius: 10px;
+  color: #ffffff;
+  margin: 20px 20px;
+  padding: 7px;
+}
+.login-check > .item-checkbox{
+  background: transparent !important;
+  color: #ffffff !important;
+}
+
+.login-check .checkbox-icon:before{
+  background: #008A93 !important;
+  border: none !important;
+}
+
+.fc-button-prev , .fc-button-next{
+  margin-top: 7px;
+  width: 100%;
+  text-align: center;
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+.multimedia-separator{
+  border-left: 1px solid #444;
+  height: 100%;
+}
+
+.eventA{
+  background-color: #D6F2F8;
+  border-color: #D6F2F8;
+}
+
+.eventB{
+  background-color: #F6D5E3;
+  border-color: #F6D5E3;
+}
+
+.eventC{
+  background-color: #BAE4AA;
+  border-color: #BAE4AA;
+}
+
+.event-detail{
+  background: #ffffff;
+  margin: 25% 10px 10px;
+  padding: 10px;
+  height: 400px;
+  box-shadow: 0px 0px 10px 5px #333333;
+}
+
+.cell-eventA{
+  background: #D6F2F8;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  margin: auto;
+}
+
+.cell-eventB{
+  background: #F6D5E3;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  margin: auto;
+}
+
+.cell-eventC{
+  background: #BAE4AA;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  margin: auto;
+}
+
+.right{
+  text-align: right;
+}
+
+.left{
+  text-align: left;
+}
+
+.full{
+  width: 100%;
+}
+
+.detail-number{
+  font-size: 90px;
+  margin-top: 30px;
+  margin-bottom: 25px;
 }

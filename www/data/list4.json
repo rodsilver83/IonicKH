@@ -1,0 +1,30 @@
+{
+  "status": "ok",
+  "message": "OK",
+  "data": [
+    {
+      "title": "Esmalte 100 satinado",
+      "image": "img/catalogo/9.jpg",
+      "type": "product",
+      "id": 1
+    },
+    {
+      "title": "Producto 2",
+      "image": "img/catalogo/6.jpg",
+      "type": "product",
+      "id": 1
+    },
+    {
+      "title": "Producto 3",
+      "image": "img/catalogo/8.jpg",
+      "type": "product",
+      "id": 1
+    },
+    {
+      "title": "Producto 4",
+      "image": "img/catalogo/5.jpg",
+      "type": "product",
+      "id": 1
+    }
+  ]
+}

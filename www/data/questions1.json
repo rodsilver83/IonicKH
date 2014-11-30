@@ -1,0 +1,57 @@
+{
+  "status": "ok",
+  "message": "OK",
+  "data": {
+    "menu": {
+      "title": "Imagen Ejecutivo",
+      "image": "img/catalogo/10.jpg"
+    },
+    "questions": [
+      {
+        "type": "checkbox",
+        "title": "Uniforme: playera de la compañia, limpia, planchada.",
+        "answers": []
+      },
+      {
+        "type": "checkbox",
+        "title": "Uniforme: pantalón del uniforme, limpio y planchado.",
+        "answers": []
+      },
+      {
+        "type": "checkbox",
+        "title": "Uniforme: Gafete visibile, con nombre y fotografia.",
+        "answers": []
+      },
+      {
+        "type": "checkbox",
+        "title": "Uniforme: Zapatos boleados, limpios.",
+        "answers": []
+      },
+      {
+        "type": "checkbox",
+        "title": "Uniforme: Minimizar accesorios (pulseras, cadenas)",
+        "answers": []
+      },
+      {
+        "type": "checkbox",
+        "title": "Apariencia personal: Peinado y barba arreglada (en su caso).",
+        "answers": []
+      },
+      {
+        "type": "checkbox",
+        "title": "Apariencia personal: Uñas limpias y recortadas.",
+        "answers": []
+      },
+      {
+        "type": "checkbox",
+        "title": "Apariencia personal: Aliento fresco.",
+        "answers": []
+      },
+      {
+        "type": "checkbox",
+        "title": "Equipo de seguridad: Faja",
+        "answers": []
+      }
+    ]
+  }
+}

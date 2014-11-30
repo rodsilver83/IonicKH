@@ -5,20 +5,26 @@
     "videos": [
       {
         "id": 1,
-        "title": "Autos",
-        "image": "http://webadmin.tapp.q-ark.mx/assets/uploads/internews/noticias/3a9b2-10_img_entrada.png",
+        "title": "Big Game ad starring Terry Crews and the Muppets",
+        "image": "img/video/1.jpg",
         "url": "https://www.youtube.com/embed/V4LnorVVxfw"
       },
       {
         "id": 2,
-        "title": "Viajes",
-        "image": "http://webadmin.tapp.q-ark.mx/assets/uploads/internews/noticias/d2fd7-12_img_entrada.png",
+        "title": "Comex Masters: Los mejores frente a los mejores",
+        "image": "img/video/2.jpg",
         "url": "https://www.youtube.com/embed/u155ncSlkCk"
       },
       {
         "id": 3,
-        "title": "Comida",
-        "image": "http://webadmin.tapp.q-ark.mx/assets/uploads/internews/noticias/d4720-16_img_entrada.png",
+        "title": "inFamous Second son (2014): E3 Trailler [PS4]",
+        "image": "img/video/3.jpg",
+        "url": "https://www.youtube.com/embed/SMehXlCOEyQ"
+      },
+      {
+        "id": 4,
+        "title": "Interprotectión: Orgulloso patrocinador de Sauber F1 Team.",
+        "image": "img/video/4.jpg",
         "url": "https://www.youtube.com/embed/SMehXlCOEyQ"
       }
     ]

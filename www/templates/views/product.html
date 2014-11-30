@@ -3,9 +3,11 @@
     <div class="item item-image">
       <img ng-src="{{product.image}}">
     </div>
+    <div class="product-gradient">
+      <h3 class="product-title">{{product.title}}</h3>
+    </div>
     <div class="padding">
-      <h4>{{product.title}}</h4>
-      <p ng-bind-html="product.content"></p>
+      <p class="product-description" ng-bind-html="product.content"></p>
     </div>
   </ion-content>
 </ion-view>

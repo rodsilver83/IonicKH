@@ -1,32 +1,33 @@
 <ion-view title="KnowHow">
   <ion-content>
-    <div ng-cloak section="section" ng-repeat="section in sections">
-      <a ng-if="section.type != 'multimedia'" class="section" href="{{goTo(section)}}">
-        <div class="section-image" style="background-image: url('{{section.image}}')">
-          <div class="black-fade"></div>
-          <p>{{section.title}}</p>
+    <div ng-cloak section="section" ng-repeat="section in sections" style="height:{{height}}px;" class="section">
+      <a ng-if="section.type != 'multimedia'" class="section" href="{{goTo(section)}}" style="height:{{height}}px;">
+        <div class="section-image main-section-image" style="background-image: url('{{section.image}}'); height:{{height}}px;">
+          <div class="black-fade" style="height:{{height}}px;"></div>
+          <p style="margin-top: {{marginText}}px">{{section.title}}</p>
         </div>
       </a>
 
       <div ng-if="section.type == 'multimedia'" class="section" ng-init="open=false">
-        <div on-tap="open=!open" class="section-image section-multimedia"
-             ng-class="{open:open}" style="background-image: url('{{section.image}}')">
-          <div class="black-fade">
-            <div class="row row-center row-multimedia">
+        <div on-tap="open=!open" class="section-image section-multimedia main-section-image"
+             ng-class="{open:open}" style="background-image: url('{{section.image}}'); height:{{height}}px;">
+          <div class="black-fade" style="height:{{height}}px;">
+            <div class="row row-center row-multimedia" style="height: {{height}}px">
               <div class="col">
                 <a ng-show="open" class="multimedia-back button button-icon icon ion-ios7-arrow-forward"></a>
               </div>
             </div>
           </div>
-          <p>{{section.title}}</p>
+          <p style="margin-top: {{marginText}}px">{{section.title}}</p>
         </div>
-        <div class="multimedia-buttons">
-          <div class="row row-center row-multimedia">
+        <div class="multimedia-buttons" style="margin-top: -{{height}}px; height: {{height}}px">
+          <div class="row row-center row-multimedia" style="height: {{height}}px">
             <div class="col-offset-33 col-33 center">
               <a class="multimedia-icon button button-icon icon ion-ios7-videocam" href="#/tab/video"></a>
             </div>
+            <div class="multimedia-separator"></div>
             <div class="col-33 center">
-              <a class="multimedia-icon button button-icon icon ion-ios7-volume-high" href="#/tab/audio"></a>
+                <a class="multimedia-icon button button-icon icon ion-ios7-volume-high" href="#/tab/audio"></a>
             </div>
           </div>
         </div>

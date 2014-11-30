@@ -3,22 +3,28 @@
   "message": "OK",
   "data": [
     {
-      "title": "Autos",
-      "image": "http://webadmin.tapp.q-ark.mx/assets/uploads/internews/noticias/d2fd7-12_img_entrada.png",
-      "type": "product",
+      "title": "Soluciones personales",
+      "image": "img/catalogo/1.jpg",
+      "type": "list",
+      "id": 3
+    },
+    {
+      "title": "Esmaltes",
+      "image": "img/catalogo/2.jpg",
+      "type": "list",
       "id": 4
     },
     {
-      "title": "Producto 2",
-      "image": "http://webadmin.tapp.q-ark.mx/assets/uploads/internews/noticias/d4720-16_img_entrada.png",
-      "type": "product",
-      "id": 5
+      "title": "Hibrido",
+      "image": "img/catalogo/3.jpg",
+      "type": "list",
+      "id": 3
     },
     {
-      "title": "Producto 3",
-      "image": "http://webadmin.tapp.q-ark.mx/assets/uploads/internews/noticias/3a9b2-10_img_entrada.png",
+      "title": "Juegos",
+      "image": "img/catalogo/4.jpg",
       "type": "product",
-      "id": 3
+      "id": 1
     }
   ]
 }

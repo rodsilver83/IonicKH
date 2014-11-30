@@ -4,32 +4,32 @@
   "data": [
     {
       "title": "Catálogo de Productos",
-      "image": "http://webadmin.tapp.q-ark.mx/assets/uploads/internews/noticias/7a107-5_img_entrada.png",
+      "image": "img/home/catalogo.jpg",
       "type": "list",
       "id": 1
     },
     {
       "title": "Procesos de venta y servicios",
-      "image": "http://webadmin.tapp.q-ark.mx/assets/uploads/internews/noticias/55190-14_img_entrada.png",
+      "image": "img/home/procesos.jpg",
       "type": "list",
       "id": 2
     },
     {
       "title": "Capacitación",
-      "image": "http://webadmin.tapp.q-ark.mx/assets/uploads/internews/noticias/55190-14_img_entrada.png",
+      "image": "img/home/capacitacion.jpg",
       "type": "list",
       "id": 2
     },
     {
       "title": "Multimedia",
-      "image": "http://webadmin.tapp.q-ark.mx/assets/uploads/internews/noticias/7a107-5_img_entrada.png",
+      "image": "img/home/multimedia.jpg",
       "type": "multimedia",
       "id": 4
     },
     {
       "title": "Programa mensual de capacitación y eventos",
-      "image": "http://webadmin.tapp.q-ark.mx/assets/uploads/internews/noticias/d4720-16_img_entrada.png",
-      "type": "list",
+      "image": "img/home/calendario.jpg",
+      "type": "calendar",
       "id": 5
     }
   ]
