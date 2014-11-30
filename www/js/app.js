@@ -1,13 +1,14 @@
-angular.module('ionicApp', ['ionic','ngCordova','ui.calendar','Directives','Controllers','Services'])
+angular.module('ionicApp', ['ionic', 'ngCordova', 'ui.calendar', 'Directives', 'Controllers', 'Services'])
 
-  .run(function($cordovaSplashscreen) {
+  .run(function ($cordovaSplashscreen,$http) {
 
-    setTimeout(function() {
-      $cordovaSplashscreen.hide()
+    setTimeout(function () {
+      $cordovaSplashscreen.hide();
+
     }, 3000)
   })
 
-  .config(function($stateProvider, $urlRouterProvider,$sceDelegateProvider) {
+  .config(function ($stateProvider, $urlRouterProvider, $sceDelegateProvider) {
 
     $sceDelegateProvider.resourceUrlWhitelist([
       // Allow same origin resource loads.
@@ -118,7 +119,7 @@ angular.module('ionicApp', ['ionic','ngCordova','ui.calendar','Directives','Cont
           }
         }
       })
-      ;
+    ;
 
     $urlRouterProvider.otherwise("/launch/login");
 

@@ -1,7 +1,78 @@
 [
   {
-    "title":"Capacitacion de ventas",
-    "start":"2014-11-20",
-    "end":"2014-11-20"
+    "date":"2014-11-3",
+    "events": [
+      {
+        "title": "Capacitacion de ventas",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "year": "2014",
+        "month": "11",
+        "day": "3",
+        "type": "A"
+      },
+      {
+        "title": "Capacitacion de ventas",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "year": "2014",
+        "month": "11",
+        "day": "3",
+        "type": "B"
+      },
+      {
+        "title": "Capacitacion de ventas",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "year": "2014",
+        "month": "11",
+        "day": "3",
+        "type": "C"
+      }
+    ]
+  },
+  {
+    "date":"2014-11-14",
+    "events": [
+      {
+        "title": "Capacitacion de ventas",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "year": "2014",
+        "month": "11",
+        "day": "14",
+        "type": "A"
+      }
+    ]
+  },
+  {
+    "date":"2014-11-18",
+    "events": [
+      {
+        "title": "Capacitacion de ventas",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "year": "2014",
+        "month": "11",
+        "day": "18",
+        "type": "C"
+      }
+    ]
+  },
+  {
+    "date":"2014-11-27",
+    "events": [
+      {
+        "title": "Capacitacion de ventas",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "year": "2014",
+        "month": "11",
+        "day": "27",
+        "type": "B"
+      },
+      {
+        "title": "Capacitacion de ventas",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "year": "2014",
+        "month": "11",
+        "day": "27",
+        "type": "C"
+      }
+    ]
   }
 ]

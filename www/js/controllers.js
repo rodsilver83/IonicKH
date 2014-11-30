@@ -178,6 +178,8 @@ angular.module('Controllers', ['ui.calendar'])
       var m = date.getMonth();
       var y = date.getFullYear();
 
+      $scope.detail = {date: null, month: null};
+
       $scope.changeTo = 'Hungarian';
       /* event source that pulls from google.com */
       $scope.eventSource = {
@@ -185,12 +187,33 @@ angular.module('Controllers', ['ui.calendar'])
         className: 'gcal-event',           // an option!
         currentTimezone: 'America/Chicago' // an option!
       };
-      /* event source that contains custom events on the scope */
-      $scope.events = [
-        {title: '', start: new Date(y, m, 3), className: "eventA"},
-        {title: '', start: new Date(y, m, 3), className: "eventB"},
-        {title: '', start: new Date(y, m, 3), className: "eventC"}
-      ];
+
+
+      $scope.eventRender = function(event, element) {
+        element.attr("data-tap-disabled","true");
+      };
+
+
+      $scope.events = [];
+      $scope.eventsList = [];
+
+      $http.get('data/calendar.json', {
+        cache: true
+      })
+        .then(function (data) {
+          $scope.eventsList = data.data;
+          for(i=0; i<data.data.length; i++) {
+            for(j=0; j<data.data[i].events.length; j++) {
+              var event = data.data[i].events[j];
+              $scope.events.push({
+                title: '',
+                start: new Date(event.year, event.month - 1, event.day),
+                className: ['event' + event.type]
+              });
+            }
+          }
+        });
+
       /* event source that calls a function on every view switch */
       $scope.eventsF = function (start, end, timezone) {
         var s = new Date(start).getTime() / 1000;
@@ -212,14 +235,27 @@ angular.module('Controllers', ['ui.calendar'])
       };
       /* alert on eventClick */
       $scope.alertOnEventClick = function (date, jsEvent, view) {
+        var eventDate = date._start;
+        var dateString = eventDate.getFullYear()+'-'+(eventDate.getMonth()+1)+'-'+eventDate.getDate();
+
+        $scope.dateEvents = getDateEvents(dateString);
+        $scope.openModal(eventDate);
       };
+
+      function getDateEvents(date){
+        for(i=0; i<$scope.eventsList.length; i++) {
+          if($scope.eventsList[i].date == date) {
+            return $scope.eventsList[i].events;
+          }
+        }
+      }
 
       /* config object */
       $scope.uiConfig = {
         calendar: {
           dayNamesShort: ["D", "L", "M", "M", "J", "V", "S"],
           monthNames: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
-          height: 450,
+          height: 400,
           editable: true,
           header: {
             left: 'prev',
@@ -232,6 +268,63 @@ angular.module('Controllers', ['ui.calendar'])
 
       /* event sources array*/
       $scope.eventSources = [$scope.events, $scope.eventSource, $scope.eventsF];
+
+      $ionicModal.fromTemplateUrl('my-modal.html', {
+        scope: $scope,
+        animation: 'slide-in-up'
+      }).then(function(modal) {
+        $scope.modal = modal;
+      });
+      $scope.openModal = function(date) {
+        setDetailDate(date);
+        $scope.modal.show();
+      };
+      $scope.closeModal = function() {
+        $scope.modal.hide();
+      };
+
+
+      function setDetailDate(date) {
+        $scope.detail.date = date;
+        switch(date.getMonth()){
+          case 0:
+            $scope.detail.month = 'Enero';
+            break;
+          case 1:
+            $scope.detail.month = 'Febrero';
+            break;
+          case 2:
+            $scope.detail.month = 'Marzo';
+            break;
+          case 3:
+            $scope.detail.month = 'Abril';
+            break;
+          case 4:
+            $scope.detail.month = 'Mayo';
+            break;
+          case 5:
+            $scope.detail.month = 'Junio';
+            break;
+          case 6:
+            $scope.detail.month = 'Julio';
+            break;
+          case 7:
+            $scope.detail.month = 'Agosto';
+            break;
+          case 8:
+            $scope.detail.month = 'Septiembre';
+            break;
+          case 9:
+            $scope.detail.month = 'Octubre';
+            break;
+          case 10:
+            $scope.detail.month = 'Noviembre';
+            break;
+          case 11:
+            $scope.detail.month = 'Diciembre';
+            break;
+        }
+      }
     }])
 
   .controller('HomeTabCtrl', function ($scope) {

@@ -2,39 +2,43 @@
  * Created by Rod on 10/31/14.
  */
 angular.module('Services', [])
-  .factory('HomeService',['$http','$q','$rootScope',function($http,$q,$rootScope){
+  .factory('HomeService', ['$http', '$q', '$rootScope', function ($http, $q, $rootScope) {
 
     var homeList = null;
-    $http.get('data/home.json',{
+    var eventList = null;
+    $http.get('data/home.json', {
       cache: true
-    }).success(function(data){
+    }).success(function (data) {
       homeList = data.data;
       $rootScope.$broadcast('HomeData');
     });
 
     return {
-      getData: function(){
+      getData: function () {
         return homeList;
       },
-      goTo: function(section){
-        switch(section.type){
+      getEvents: function(){
+        return eventList;
+      },
+      goTo: function (section) {
+        switch (section.type) {
           case 'list':
-            return '#/tab/list/'+section.id;
-          break;
+            return '#/tab/list/' + section.id;
+            break;
           case 'product':
-            return '#/tab/product/'+section.id;
+            return '#/tab/product/' + section.id;
             break;
           case 'menu':
-            return '#/tab/menu/'+section.id;
+            return '#/tab/menu/' + section.id;
             break;
           case 'contentQuestions':
-            return '#/tab/questions/'+section.id;
+            return '#/tab/questions/' + section.id;
             break;
           case 'content':
-            return '#/tab/content/'+section.id;
+            return '#/tab/content/' + section.id;
             break;
           case 'calendar':
-            return '#/tab/calendar/'+section.id;
+            return '#/tab/calendar/' + section.id;
             break;
           default:
             return '#/tab/home';

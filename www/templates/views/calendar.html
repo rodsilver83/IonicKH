@@ -1,5 +1,38 @@
 <ion-view title="KnowHow">
     <ion-content>
-        <div ui-calendar="uiConfig.calendar" ng-model="eventSources"></div>
+        <div ui-calendar="uiConfig.calendar" data-tap-disabled="true" ng-model="eventSources"></div>
     </ion-content>
 </ion-view>
+
+<script id="my-modal.html" type="text/ng-template">
+    <ion-modal-view>
+        <ion-content>
+            <div class="event-detail">
+                <div class="row">
+                    <div class="col-67 right">
+                        <h1>{{detail.month}}/ </h1>
+                    </div>
+                    <div class="col-33 left">
+                        <p class="detail-number">{{detail.date.getDate()}}</p>
+                    </div>
+                </div>
+                <div class="events-details">
+                    <div class="row" ng-repeat="event in dateEvents">
+                        <div class="col-20 center">
+                            <div class="cell-event{{event.type}}"></div>
+                        </div>
+                        <div class="col-80">{{event.description}}
+                        </div>
+                    </div>
+                </div>
+                <div class="row modal-button">
+                    <div class="col center">
+                        <button class="button full" on-tap="closeModal()">
+                            Listo
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </ion-content>
+    </ion-modal-view>
+</script>

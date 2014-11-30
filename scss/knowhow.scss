@@ -396,16 +396,19 @@ audio{
 .eventA{
   background-color: #D6F2F8;
   border-color: #D6F2F8;
+  height: 10px;
 }
 
 .eventB{
   background-color: #F6D5E3;
   border-color: #F6D5E3;
+  height: 10px;
 }
 
 .eventC{
   background-color: #BAE4AA;
   border-color: #BAE4AA;
+  height: 10px;
 }
 
 .event-detail{
@@ -456,4 +459,21 @@ audio{
   font-size: 90px;
   margin-top: 30px;
   margin-bottom: 25px;
+}
+
+.modal-button{
+  bottom: 0;
+  margin: auto;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.events-details{
+  height: 230px;
+  overflow: hidden;
+}
+
+.fc-header-title{
+  margin-top: 7px !important;
 }
