@@ -178,104 +178,60 @@ angular.module('Controllers', ['ui.calendar'])
       var m = date.getMonth();
       var y = date.getFullYear();
 
-      $scope.detail = {date: null, month: null};
+      $scope.changeTo = 'Hungarian';
+      /* event source that pulls from google.com */
+      $scope.eventSource = {
+        url: "http://www.google.com/calendar/feeds/usa__en%40holiday.calendar.google.com/public/basic",
+        className: 'gcal-event',           // an option!
+        currentTimezone: 'America/Chicago' // an option!
+      };
+      /* event source that contains custom events on the scope */
+      $scope.events = [
+        {title: '', start: new Date(y, m, 3), className: "eventA"},
+        {title: '', start: new Date(y, m, 3), className: "eventB"},
+        {title: '', start: new Date(y, m, 3), className: "eventC"}
+      ];
+      /* event source that calls a function on every view switch */
+      $scope.eventsF = function (start, end, timezone) {
+        var s = new Date(start).getTime() / 1000;
+        var e = new Date(end).getTime() / 1000;
+        var m = new Date(start).getMonth();
+        var events = [{
+          title: 'Feed Me ' + m,
+          start: s + (50000),
+          end: s + (100000),
+          allDay: false,
+          className: ['customFeed']
+        }];
+      };
 
+      $scope.calEventsExt = {
+        color: '#f00',
+        textColor: 'yellow',
+        events: []
+      };
+      /* alert on eventClick */
+      $scope.alertOnEventClick = function (date, jsEvent, view) {
+      };
+
+      /* config object */
       $scope.uiConfig = {
         calendar: {
+          dayNamesShort: ["D", "L", "M", "M", "J", "V", "S"],
+          monthNames: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
+          height: 450,
+          editable: true,
           header: {
             left: 'prev',
             center: 'title',
             right: 'next'
-          }
+          },
+          eventClick: $scope.alertOnEventClick
         }
       };
-
-
-      $scope.uiConfig.calendar.dayNamesShort = ["D", "L", "M", "M", "J", "V", "S"];
-      $scope.uiConfig.calendar.monthNames = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto",
-        "Septiembre", "Octubre", "Noviembre", "Diciembre"];
-
-      /* event source that contains custom events on the scope */
-
-      $scope.events = [
-        {title: 'Evento A', start: "11 03 2014 10:00:00 GMT-0600", className: "eventA"}
-      ];
 
       /* event sources array*/
-      $scope.eventSources = [$scope.events];
-/*
-      $scope.alertOnEventClick = function (date, jsEvent, view) {
-        setDetailDate(date._start);
-        $scope.openModal();
-      };
-
-      function setDetailDate(date) {
-        $scope.detail.date = date;
-        switch(date.getMonth()){
-          case 0:
-            $scope.detail.month = 'Enero';
-            break;
-          case 1:
-            $scope.detail.month = 'Febrero';
-            break;
-          case 2:
-            $scope.detail.month = 'Marzo';
-            break;
-          case 3:
-            $scope.detail.month = 'Abril';
-            break;
-          case 4:
-            $scope.detail.month = 'Mayo';
-            break;
-          case 5:
-            $scope.detail.month = 'Junio';
-            break;
-          case 6:
-            $scope.detail.month = 'Julio';
-            break;
-          case 7:
-            $scope.detail.month = 'Agosto';
-            break;
-          case 8:
-            $scope.detail.month = 'Septiembre';
-            break;
-          case 9:
-            $scope.detail.month = 'Octubre';
-            break;
-          case 10:
-            $scope.detail.month = 'Noviembre';
-            break;
-          case 11:
-            $scope.detail.month = 'Diciembre';
-            break;
-        }
-      }
-
-      $ionicModal.fromTemplateUrl('my-modal.html', {
-        scope: $scope,
-        animation: 'slide-in-up'
-      }).then(function (modal) {
-        $scope.modal = modal;
-      });
-      $scope.openModal = function () {
-        $scope.modal.show();
-      };
-      $scope.closeModal = function () {
-        $scope.modal.hide();
-      };
-      //Cleanup the modal when we're done with it!
-      $scope.$on('$destroy', function () {
-        $scope.modal.remove();
-      });
-      // Execute action on hide modal
-      $scope.$on('modal.hidden', function () {
-        // Execute action
-      });
-      // Execute action on remove modal
-      $scope.$on('modal.removed', function () {
-        // Execute action
-      });
-      */
+      $scope.eventSources = [$scope.events, $scope.eventSource, $scope.eventsF];
     }])
 
   .controller('HomeTabCtrl', function ($scope) {
